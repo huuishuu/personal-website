@@ -1,0 +1,22 @@
+Sitemap: https://huuishuu.weebly.com/sitemap.xml
+
+User-agent: NerdyBot
+Disallow: /
+
+User-agent: dotbot
+Crawl-delay: 10
+
+User-agent: *
+Disallow: /ajax/
+Disallow: /apps/
+Disallow: /abandonware.html
+Disallow: /beatmaps.html
+Disallow: /2012-2013.html
+Disallow: /skins.html
+Disallow: /2014.html
+Disallow: /osu-stuff.html
+Disallow: /2015.html
+Disallow: /open-hexagon-level-packs.html
+Disallow: /music.html
+Disallow: /archives.html
+Disallow: /https://huuishuu.atabook.org/
