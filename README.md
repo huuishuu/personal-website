@@ -60,5 +60,8 @@ Links and asset references use relative paths so the site works both at a domain
 
 GitHub Pages uses the root `404.html` to redirect known former `.html` addresses and earlier page-folder addresses to their new locations, preserving query strings and anchors. These compatibility redirects require JavaScript; other static hosts must be configured to serve `404.html` for missing URLs. When moving another page, update its incoming links and the address mappings in `404.html`.
 
+# Favicon
+The site favicon is `favicon.ico`, generated from `2.png` with 16, 32, and 48 pixel versions. Each content page links to it using a relative path. The custom 404 page uses the published GitHub Pages URL because it can be served at missing URLs at any folder depth.
+
 # Running this locally
 To preview the current pages locally, run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/`. Python's basic server does not serve the custom 404 page, so old-address redirects should be checked on GitHub Pages or a server configured with that error page.
