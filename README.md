@@ -63,5 +63,7 @@ GitHub Pages uses the root `404.html` to redirect known former `.html` addresses
 # Favicon
 The site favicon is `favicon.ico`, generated from `2.png` with 16, 32, and 48 pixel versions. Each content page links to it using a relative path. The custom 404 page uses the published GitHub Pages URL because it can be served at missing URLs at any folder depth.
 
+The design of the favicon is repurposed from my [old YouTube channel's logo](https://www.youtube.com/@BroilerTM).
+
 # Running this locally
 To preview the current pages locally, run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/`. Python's basic server does not serve the custom 404 page, so old-address redirects should be checked on GitHub Pages or a server configured with that error page.
