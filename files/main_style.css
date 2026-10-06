@@ -63,6 +63,7 @@
  #nav-wrap { background: url(theme/nav-bg.jpg?1791197547); box-shadow:0 1px 2px 1px rgba(0,0,0,0.25); position:relative; z-index:3; }
  #nav-wrap .container { clear: both; overflow: hidden; position: relative; width: 960px; box-shadow:none; }
  #nav-wrap .container ul { list-style: none; float: left; }
+ #nav-wrap .container .wsite-menu-default { float: none; display: table; margin: 0 auto; }
  #nav-wrap .container ul li { list-style: none; float: left; background: url(theme/nav-sep.png?1791197547) repeat-y center right; padding-right: 2px; }
  #nav-wrap .container ul li.wsite-nav-0 { padding-left:1px; }
  #nav-wrap .container ul { background: url(theme/nav-sep.png?1791197547) repeat-y center left; }

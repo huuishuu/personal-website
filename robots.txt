@@ -1,4 +1,4 @@
-Sitemap: https://huuishuu.weebly.com/sitemap.xml
+Sitemap: https://huuishuu.github.io/personal-website/sitemap.xml
 
 User-agent: NerdyBot
 Disallow: /
