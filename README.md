@@ -60,6 +60,13 @@ Links and asset references use relative paths so the site works both at a domain
 
 GitHub Pages uses the root `404.html` to redirect known former `.html` addresses and earlier page-folder addresses to their new locations, preserving query strings and anchors. These compatibility redirects require JavaScript; other static hosts must be configured to serve `404.html` for missing URLs. When moving another page, update its incoming links and the address mappings in `404.html`.
 
+## Legacy Pages
+Since "Personal Blog" and "Website Updates" now link to external sites, the legacy pages for these, as were found on Weebly, are unlisted but still fully accessible via the following links:
+- https://huuishuu.github.io/personal-website/personal-blog/index.html
+- https://huuishuu.github.io/personal-website/website-updates/index.html
+
+These pages have been deprecated and will no longer be updated but are kept archived and unlisted for preservation purposes.
+
 # Favicon
 The site favicon is `favicon.ico` with 16, 32, and 48 pixel versions. Each content page links to it using a relative path.
 The custom 404 page uses the published GitHub Pages URL because it can be served at missing URLs at any folder depth.
