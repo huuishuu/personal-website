@@ -15,13 +15,10 @@
  div#content {min-height:400px;}
  #header-wrap { padding:30px 0; background:#fff; position:relative; z-index:2; box-shadow:0 1px 2px 1px rgba(0,0,0,0.05); }
  #logo, #logo a, #logo a:hover { color: #353535; text-decoration: none; font-size: 36px; font-family: 'Open Sans', sans-serif; font-weight: 500; letter-spacing:1px; }
- #header { border-collapse: collapse; border-spacing: 0; width:100%; }
- #header td { vertical-align: middle; text-align: left; }
- #header-right table { float: right; width: 1px; }
- #header-right td { padding: 0; }
- #header-right .phone-number .wsite-text { display: block; white-space: nowrap; }
- #header-right .phone-number .wsite-text a {}
- #header-right .phone-number .wsite-text a:hover {}
+ #header { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; }
+ #logo { flex: 1; min-width: 0; }
+ #header-right { flex: 0 0 auto; }
+ #header .wsite-logo, #logo a, #wsite-title { display: block; max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
  #nav-wrap { background: url(theme/nav-bg.jpg?1791197547); box-shadow:0 1px 2px 1px rgba(0,0,0,0.25); position:relative; z-index:3; }
  #nav-wrap .container { clear: both; overflow: hidden; position: relative; width: 960px; box-shadow:none; }
  #nav-wrap .container ul { list-style: none; float: left; }
@@ -75,3 +72,180 @@ div.paragraph ul, div.paragraph ol { padding-left: 3em !important; margin: 5px 0
 div.paragraph li { padding-left: 5px !important; margin: 3px 0 0 !important; }
 div.paragraph ul, div.paragraph ul li { list-style: disc outside !important; }
 div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; }
+
+/* Keep the original desktop width, but let the theme fit smaller screens. */
+.container { max-width: calc(100% - 32px); }
+.navigation-toggle, .submenu-toggle { display: none; }
+#site-navigation[hidden] { display: none !important; }
+
+@media screen and (max-width: 959px) {
+    body { font-size: 16px; line-height: 1.6; }
+    #header-wrap { padding: 20px 0; }
+    #header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    #logo, #header-right { box-sizing: border-box; flex: none; min-width: 0; max-width: 100%; }
+    #logo { width: 100%; }
+    #logo, #logo a, #logo a:hover { font-size: clamp(24px, 5vw, 32px); line-height: 1.3; overflow-wrap: anywhere; }
+    #header-right .theme-toggle {
+        float: none;
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.4;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+    #header-right .theme-toggle::before { flex-shrink: 0; }
+
+    #nav-wrap .container { overflow: visible; }
+    .navigation-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 48px;
+        margin: 8px 0;
+        padding: 10px 16px;
+        border: 1px solid #767676;
+        border-radius: 5px;
+        background: #252525;
+        color: #fff;
+        font: inherit;
+        cursor: pointer;
+    }
+    .navigation-toggle::before { content: '\2630'; }
+    .navigation-toggle[aria-expanded='true']::before { content: '\00d7'; }
+    .navigation-toggle:focus-visible, #nav-wrap a:focus-visible {
+        outline: 2px solid #77c7fa;
+        outline-offset: -2px;
+    }
+    #nav-wrap .container ul,
+    #nav-wrap .container .wsite-menu-default {
+        display: block;
+        float: none;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        list-style: none;
+    }
+    #nav-wrap .container ul li,
+    #nav-wrap .container ul li.wsite-nav-0 {
+        position: relative;
+        float: none;
+        width: auto;
+        padding: 0;
+        background: none;
+    }
+    #nav-wrap .container ul li a {
+        position: relative;
+        box-sizing: border-box;
+        min-height: 48px;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0;
+        text-transform: none;
+        overflow-wrap: anywhere;
+        cursor: pointer;
+        border-top: 1px solid #444;
+    }
+    #nav-wrap .container ul li a[aria-expanded],
+    #nav-wrap .container ul li a[data-submenu-link] { padding-right: 56px; }
+    #nav-wrap .container ul li a[aria-expanded]::after {
+        content: '+';
+        position: absolute;
+        right: 16px;
+        top: 12px;
+    }
+    #nav-wrap .container ul li a[aria-expanded='true']::after { content: '\2212'; }
+    .submenu-toggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        min-height: 48px;
+        padding: 0;
+        border: 0;
+        border-left: 1px solid #666;
+        background: #252525;
+        color: #fff;
+        font: 24px 'Open Sans', sans-serif;
+        cursor: pointer;
+    }
+    .submenu-toggle::before { content: '+'; }
+    .submenu-toggle[aria-expanded='true']::before { content: '\2212'; }
+    .submenu-toggle:focus-visible { outline: 2px solid #77c7fa; outline-offset: -2px; }
+    #nav-wrap .container .wsite-menu-wrap {
+        /* Mobile submenus stay in the page flow, without desktop offsets. */
+        left: auto !important;
+        top: auto !important;
+        box-sizing: border-box;
+        min-width: 0;
+        max-width: 100%;
+        width: auto;
+        margin-left: 12px;
+        border-left: 1px solid #666;
+        background: #252525;
+        box-shadow: none;
+    }
+    #nav-wrap .container .wsite-menu-arrow { display: none; }
+    #nav-wrap .container .wsite-menu-title { display: block; }
+
+    #banner, .tall-header-page #banner, .tall-header-page .wsite-header {
+        max-width: 100%;
+        background-size: cover;
+    }
+    #main-wrap { padding: 12px 0; }
+    div.paragraph, p { line-height: 1.65; }
+    #wsite-content, .blog-body, .blog-sidebar { overflow-wrap: anywhere; }
+    #wsite-content .paragraph[style*='text-align:justify'],
+    #wsite-content .paragraph[style*='text-align: justify'],
+    .blog-post .blog-content, #blog-content { text-align: left !important; }
+    div.paragraph ul, div.paragraph ol { padding-left: 1.25em !important; }
+    div.paragraph li { padding-left: 0 !important; }
+    #main-wrap .container blockquote { padding: 8px 16px !important; }
+
+    .wsite-multicol-table-wrap { margin: 0 !important; }
+    .wsite-multicol-table, .wsite-multicol-tbody, .wsite-multicol-tr,
+    .wsite-multicol-col { display: block; width: 100% !important; }
+    .wsite-multicol-col { box-sizing: border-box; padding: 0 !important; }
+    .wsite-multicol-col + .wsite-multicol-col { margin-top: 16px !important; }
+    #blogTable, #blogTable > tbody, #blogTable > tbody > tr,
+    #blogTable > tbody > tr > td { display: block; width: 100% !important; }
+    .blog-body { float: none !important; width: 100%; }
+    #blogTable .blog-sidebar { box-sizing: border-box; padding: 24px 0 0; }
+    #main-wrap img { max-width: 100% !important; height: auto; }
+    #main-wrap iframe, #main-wrap video, #main-wrap audio { max-width: 100%; }
+    #main-wrap .imageGallery { max-width: 100%; }
+    .wsite-youtube-wrapper { width: 100% !important; }
+    .wsite-form-input, .form-select { box-sizing: border-box; max-width: 100%; font-size: 16px; }
+    .wsite-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        max-width: 100%;
+        min-height: 47px;
+        height: auto;
+        padding: 10px 18px;
+        border-radius: 5px;
+        background: linear-gradient(#4ba8df, #258bc7);
+    }
+    .wsite-button:hover { background: linear-gradient(#66b8e9, #359bdc); }
+    .wsite-button:active { background: #258bc7; }
+    .wsite-button .wsite-button-inner {
+        float: none;
+        height: auto;
+        padding: 0;
+        background: none;
+        line-height: 1.5;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+    #footer-wrap { padding: 20px 0; }
+}

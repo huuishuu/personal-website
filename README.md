@@ -67,3 +67,10 @@ The design of the favicon is repurposed from my [old YouTube channel's logo](htt
 
 # Running this locally
 To preview the current pages locally, run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000/`. Python's basic server does not serve the custom 404 page, so old-address redirects should be checked on GitHub Pages or a server configured with that error page.
+
+To test on a phone connected to the same local network, keep the server running and open `http://<computer-local-IP>:8000/` on the phone. The firewall must allow connections to port 8000.
+
+# Mobile layout
+Each content page includes viewport metadata. Responsive rules at the end of `files/main_style.css` adapt the original theme below 960px: text grows to 16px, columns and blog sidebars stack, media fits the available width, and download buttons wrap long labels. Desktop styling retains the original 960px layout.
+
+On smaller screens, `files/navigation.js` adds a Menu button and expands archive categories inline. On desktop, it uses the existing floating menus. The same links serve both layouts, and changing between them resets the menus. The dark mode toggle remains available beside or below the site title.
