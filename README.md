@@ -70,7 +70,7 @@ The legacy `Personal Blog` and `Website Updates` pages from Weebly, along with `
 
 These pages have been deprecated and will no longer be updated but are kept archived and unlisted for preservation purposes.
 
-Deleted Maps has been unlisted as it no longer servers its original purpose for housing my deleted maps. I've elected to re-upload those maps back onto osu! itself.
+`Deleted Maps` has been unlisted as it no longer serves its original purpose for housing my deleted maps. I've elected to re-upload those maps back onto osu! itself.
 
 # Favicon
 The site favicon is `favicon.ico` with 16, 32, and 48 pixel versions. Each content page links to it using a relative path.
