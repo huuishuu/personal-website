@@ -49,6 +49,8 @@ Archives/
 │       └── other-skins/
 ├── Open-Hexagon-level-packs/
 │   └── huus-open-hexagon-packs/ (including older-versions/)
+├── Other/ (index.html)
+│   └── bandicam/
 └── Music/
     ├── ongaku-shoujo/ (with releases under 2012-2013/, 2014/, and 2015/)
     └── halozy/ (including h--heart-and-beat-technology/)
