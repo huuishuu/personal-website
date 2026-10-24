@@ -4,7 +4,7 @@ In this folder you will find all of my legacy pages from the old [Weebly website
 
 All of the pages and their contents here are completely unused in the current version of the website, as they've been superceded by newer pages, specifically:
 - Personal Blog now links to [my Bearblog page instead](https://huuishuu.bearblog.dev/blog/)
-- Website Updates now links to the [update history of this GitHub repo]()
+- Website Updates now links to the [update history of this GitHub repo](https://github.com/huuishuu/personal-website/commits/main/)
 - News (old) has been unused even on Weebly itself since 2016 and has been hidden from navigation for the past 10+ years.
 
 These pages are merely just sitting here in a permanently archived state and are no longer maintained or updated.
