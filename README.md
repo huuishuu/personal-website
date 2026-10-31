@@ -30,7 +30,7 @@ Visitors can switch between light and dark mode with the Dark mode button beside
 # Navigation and structure
 The static site uses `files/navigation.js` for its dropdown menus. Legacy account, store, cookie, analytics, and template scripts have been removed as they were never in use, not even while the website was hosted on Weebly. The original theme class names remain to preserve the design. Download icons are served locally from `files/download-file.png`.
 
-Each page lives in its own folder with an `index.html`, for example `about/index.html`. Blog posts and update posts follow the same layout inside `personal-blog/` and `website-updates/`; older update listings live in `website-updates/previous/<number>/index.html`. The homepage stays at the root as `index.html`.
+Each page lives in its own folder with an `index.html`, for example `about/index.html`. Archived blog posts and update posts follow the same layout inside `legacy/personal-blog/` and `legacy/website-updates/`; older update listings live in `legacy/website-updates/previous/<number>/index.html`. The homepage stays at the root as `index.html`.
 
 The Archives dropdown follows the folder hierarchy in `Archives/`:
 
@@ -60,15 +60,15 @@ Folders that represent pages contain an `index.html`; category folders group the
 
 Links and asset references use relative paths so the site works both at a domain root and under a GitHub Pages project path. Shared assets remain in `files/`, `uploads/`, and `cdn-cgi/`.
 
-GitHub Pages uses the root `404.html` to redirect known former `.html` addresses and earlier page-folder addresses to their new locations, preserving query strings and anchors. These compatibility redirects require JavaScript; other static hosts must be configured to serve `404.html` for missing URLs. When moving another page, update its incoming links and the address mappings in `404.html`.
+GitHub Pages uses the root `404.html` to redirect known former `.html` addresses and earlier page-folder addresses to their new locations, preserving query strings and anchors. This includes addresses from before the archived pages moved into `legacy/`. These compatibility redirects require JavaScript; other static hosts must be configured to serve `404.html` for missing URLs. When moving another page, update its incoming links, relative asset paths, and the address mappings in `404.html`.
 
 ## Legacy Pages
 
 The legacy `Personal Blog` and `Website Updates` pages from Weebly, along with `Deleted Maps`, are unlisted but still fully accessible via the following links:
 
-- [Personal Blog](https://huuishuu.github.io/personal-website/personal-blog/index.html)
-- [Website Updates](https://huuishuu.github.io/personal-website/website-updates/index.html)
-- [Deleted Maps](https://huuishuu.github.io/personal-website/Archives/osu-stuff/Beatmaps/huus-mapping-stuff/deleted-maps/index.html)
+- [Personal Blog](https://huuishuu.github.io/personal-website/legacy/personal-blog/index.html)
+- [Website Updates](https://huuishuu.github.io/personal-website/legacy/website-updates/index.html)
+- [Deleted Maps](https://huuishuu.github.io/personal-website/legacy/deleted-maps/index.html)
 
 These pages have been deprecated and will no longer be updated but are kept archived and unlisted for preservation purposes.
 
